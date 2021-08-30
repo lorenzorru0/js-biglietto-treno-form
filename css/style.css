@@ -1,0 +1,13 @@
+
+
+.errore {
+    display: none;
+    color: red;
+}
+.biglietto {
+    display: none;
+}
+.biglietto.view,
+.errore.view {
+    display: block;
+}
