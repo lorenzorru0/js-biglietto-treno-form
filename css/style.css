@@ -106,3 +106,9 @@ h2 {
     color: #fff;
     background-color: #b91450;
 }
+
+/* Effetti active */
+.form-biglietto-input input:focus,
+.form-biglietto-input select:focus {
+    background-color: #b91450;
+}

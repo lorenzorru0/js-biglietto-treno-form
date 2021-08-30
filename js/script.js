@@ -9,13 +9,7 @@ buttonGenera.addEventListener("click",
         var kmPercorsi = parseInt(document.getElementById("km").value);
         var fasciaEta = document.getElementById("fasciaEta").value;
 
-        if (nomeCognome.length == 0) {
-            document.getElementById("biglietto").classList.remove("view");
-            document.getElementById("errore").classList.add("block");
-        } else if (isNaN(kmPercorsi) || kmPercorsi <= 0) {
-            document.getElementById("biglietto").classList.remove("view");
-            document.getElementById("errore").classList.add("block");
-        } else if (fasciaEta == undefined) {
+        if (nomeCognome.length == 0 || kmPercorsi <= 0 || fasciaEta == undefined) {
             document.getElementById("biglietto").classList.remove("view");
             document.getElementById("errore").classList.add("block");
         } else {
