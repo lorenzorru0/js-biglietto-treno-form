@@ -1,13 +1,108 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+/* Common */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #b91450;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #555;
+}
+h2 {
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+}
 
+/* Form biglietto */
+.form-biglietto {
+
+}
+.form-biglietto-input {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.form-biglietto-input div {
+    margin: 0 50px;
+}
+.form-biglietto-input p {
+    color: #b91450;
+    margin-bottom: 20px;
+}
+.form-biglietto-buttons {
+    margin-top: 25px;
+    text-align: center;
+}
+.form-biglietto-input input {
+    background-color: transparent;
+}
+.form-biglietto-input input,
+.form-biglietto-input select {
+    padding: 5px;
+    border-color: #b91450;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    border-width: 1px;
+}
+.btn {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #b91450;
+    border-color: #b91450;
+    background-color: #cccccc;
+    margin: 0 10px;
+}
 .errore {
     display: none;
+    transition: all 0.5s;
     color: red;
+    text-align: center;
+    margin-top: 10px;
 }
-.biglietto {
-    display: none;
-}
-.biglietto.view,
-.errore.view {
+.errore.block {
     display: block;
+}
+
+/* Biglietto */
+.biglietto {
+    opacity: 0;
+    transition: all 0.5s;
+}
+.biglietto.view {
+    opacity: 1;
+}
+.biglietto-container {
+    display: flex;
+    border: 1px solid black;
+}
+.biglietto-container div {
+    padding: 25px;
+}
+.biglietto-container div:first-child {
+    background-color: #808080;
+    font-weight: bold;
+}
+.biglietto-container p,
+.biglietto-container span {
+    margin: 25px 0;
+    display: block;
+}
+
+/* Effetti hover */
+.btn:hover {
+    color: #fff;
+    background-color: #b91450;
 }

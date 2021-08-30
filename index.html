@@ -4,25 +4,31 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+        <!-- /Google font -->
         <link rel="stylesheet" href="css/style.css">
         <title>Treno Boolean</title>
     </head>
     <body>
         
-        <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+        <h2>CALCOLA IL PREZZO DEL BIGLIETTO</h2>
 
-        <div class="form-biglietto">
+        <div class="container form-biglietto">
 
             <div class="form-biglietto-input">
                 <div>
-                    <label for="nome">Nome Cognome</label>
+                    <p>Nome Cognome</p>
                     <input type="text" name="nome" id="nome">
                 </div>
                 <div>
-                    <label for="km">Km da percorrere</label>
+                    <p>Km da percorrere</p>
                     <input type="number" name="km" id="km">
                 </div>
                 <div>
+                    <p>Fascia d'età</p>
                     <select name="fasciaEta" id="fasciaEta">
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>
@@ -32,37 +38,42 @@
             </div>
 
             <div class="form-biglietto-buttons">
-                <button id="genera">Genera</button>
-                <button id="annulla">Annulla</button>
-            </div>
-
-            <div id="errore" class="errore">
-                <h2>Errore! Inserisci dei dati validi</h2>
+                <button id="genera" class="btn">Genera</button>
+                <button id="annulla" class="btn">Annulla</button>
             </div>
 
         </div>
 
+        <div id="errore" class="container errore">
+            <h3>Errore! Inserisci dei dati validi</h3>
+        </div>
+
         <div id="biglietto" class="biglietto">
-            <h2>Dettaglio passeggero</h2>
-            <div>
-                <p>NOME PASSEGGERO</p>
-                <span id="nome-biglietto"></span>
-            </div>
-            <div>
-                <p>Offerta</p>
-                <span id="offerta-biglietto"></span>
-            </div>
-            <div>
-                <p>Carrozza</p>
-                <span id="carrozza"></span>
-            </div>
-            <div>
-                <p>Codice CP</p>
-                <span id="codiceCP"></span>
-            </div>
-            <div>
-                <p>Costo biglietto</p>
-                <span id="prezzo"></span>
+            <h2>IL TUO BIGLIETTO</h2>
+            <div class="container">
+                <h3>DETTAGLIO PASSEGERO</h3>
+                <div class="biglietto-container">
+                    <div>
+                        <p>NOME PASSEGGERO</p>
+                        <span id="nome-biglietto"></span>
+                    </div>
+                    <div>
+                        <p>Offerta</p>
+                        <span id="offerta-biglietto"></span>
+                    </div>
+                    <div>
+                        <p>Carrozza</p>
+                        <span id="carrozza"></span>
+                    </div>
+                    <div>
+                        <p>Codice CP</p>
+                        <span id="codiceCP"></span>
+                    </div>
+                    <div>
+                        <p>Costo biglietto</p>
+                        <span id="prezzo"></span>
+                    </div>
+                </div>
             </div>
         </div>
 

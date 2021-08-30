@@ -11,15 +11,15 @@ buttonGenera.addEventListener("click",
 
         if (nomeCognome.length == 0) {
             document.getElementById("biglietto").classList.remove("view");
-            document.getElementById("errore").classList.add("view");
+            document.getElementById("errore").classList.add("block");
         } else if (isNaN(kmPercorsi) || kmPercorsi <= 0) {
             document.getElementById("biglietto").classList.remove("view");
-            document.getElementById("errore").classList.add("view");
+            document.getElementById("errore").classList.add("block");
         } else if (fasciaEta == undefined) {
             document.getElementById("biglietto").classList.remove("view");
-            document.getElementById("errore").classList.add("view");
+            document.getElementById("errore").classList.add("block");
         } else {
-            document.getElementById("errore").classList.remove("view");
+            document.getElementById("errore").classList.remove("block");
             if (fasciaEta == "minorenne") {
                 offertaBiglietto = "Offerta Minorenni";
                 prezzoBiglietto = (kmPercorsi * 0.21) * 0.2;
@@ -38,7 +38,7 @@ buttonGenera.addEventListener("click",
             }
             document.getElementById("carrozza").innerHTML = randomIntFromInterval(1, 6);
             document.getElementById("codiceCP").innerHTML = randomIntFromInterval(90000, 99999);
-            document.getElementById("prezzo").innerHTML = prezzoBiglietto;
+            document.getElementById("prezzo").innerHTML = prezzoBiglietto.toFixed(2);
             document.getElementById("biglietto").classList.add("view");
         }
     }
@@ -50,5 +50,6 @@ buttonAnnulla.addEventListener("click",
         document.getElementById("km").value = "";
         document.getElementById("fasciaEta").value = "";
         document.getElementById("biglietto").classList.remove("view");
+        document.getElementById("errore").classList.remove("block");
     }
 );
