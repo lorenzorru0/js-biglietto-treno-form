@@ -42,7 +42,7 @@ buttonAnnulla.addEventListener("click",
     function() {
         document.getElementById("nome").value = "";
         document.getElementById("km").value = "";
-        document.getElementById("fasciaEta").value = "";
+        document.getElementById("fasciaEta").selectedIndex = "0";
         document.getElementById("biglietto").classList.remove("view");
         document.getElementById("errore").classList.remove("block");
     }

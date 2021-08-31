@@ -89,6 +89,7 @@ h2 {
     border: 1px solid black;
 }
 .biglietto-container div {
+    width: 20%;
     padding: 25px;
 }
 .biglietto-container div:first-child {
