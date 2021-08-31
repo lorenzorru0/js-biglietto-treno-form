@@ -14,15 +14,15 @@ buttonGenera.addEventListener("click",
             document.getElementById("errore").classList.add("block");
         } else {
             document.getElementById("errore").classList.remove("block");
+            prezzoBiglietto = (kmPercorsi * 0.21);
             if (fasciaEta == "minorenne") {
-                offertaBiglietto = "Offerta Minorenni";
-                prezzoBiglietto = (kmPercorsi * 0.21) * 0.2;
+                offertaBiglietto = "Sconto Minorenni";
+                prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.2);
             } else if (fasciaEta == "over") {
-                offertaBiglietto = "Offerta Silver";
-                prezzoBiglietto = (kmPercorsi * 0.21) * 0.4;
+                offertaBiglietto = "Sconto Silver";
+                prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.4);
             } else {
                 offertaBiglietto = "Biglietto Standard";
-                prezzoBiglietto = kmPercorsi * 0.21;
             }
 
             document.getElementById("nome-biglietto").innerHTML = nomeCognome;
@@ -32,7 +32,7 @@ buttonGenera.addEventListener("click",
             }
             document.getElementById("carrozza").innerHTML = randomIntFromInterval(1, 6);
             document.getElementById("codiceCP").innerHTML = randomIntFromInterval(90000, 99999);
-            document.getElementById("prezzo").innerHTML = prezzoBiglietto.toFixed(2);
+            document.getElementById("prezzo").innerHTML = prezzoBiglietto.toFixed(2) + '€';
             document.getElementById("biglietto").classList.add("view");
         }
     }
