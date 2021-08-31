@@ -9,7 +9,7 @@ buttonGenera.addEventListener("click",
         var kmPercorsi = parseInt(document.getElementById("km").value);
         var fasciaEta = document.getElementById("fasciaEta").value;
 
-        if (nomeCognome.length == 0 || kmPercorsi <= 0 || fasciaEta == undefined) {
+        if (nomeCognome.length == 0 || kmPercorsi <= 0 || isNaN(kmPercorsi) || fasciaEta == undefined) {
             document.getElementById("biglietto").classList.remove("view");
             document.getElementById("errore").classList.add("block");
         } else {
